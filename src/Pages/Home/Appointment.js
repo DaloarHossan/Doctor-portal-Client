@@ -1,7 +1,7 @@
 import React from "react";
 import doctor from '../../assets/images/doctor.png'
 import background from '../../assets/images/appointment.png'
-import PrimaryButton from "./PrimaryButton";
+import PrimaryButton from '../Sheared/PrimaryButton'
 
 const Appointment = () => {
   return (

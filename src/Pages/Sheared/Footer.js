@@ -4,23 +4,23 @@ import bg from '../../assets/images/bg.png'
 const Footer = () => {
   return (
 <div>
-<footer style={{backgroundImage:`url(${bg})`}} class="footer p-10">
+<footer style={{backgroundImage:`url(${bg})`}} className="footer p-10">
       <div>
-        <span class="footer-title">Services</span>
-        <a class="link link-hover">Emergency Checkup</a>
-        <a class="link link-hover">Monthly Checkup</a>
-        <a class="link link-hover">Weekly Checkup</a>
-        <a class="link link-hover">Deep Checkup</a>
+        <span className="footer-title">Services</span>
+        <a className="link link-hover">Emergency Checkup</a>
+        <a className="link link-hover">Monthly Checkup</a>
+        <a className="link link-hover">Weekly Checkup</a>
+        <a className="link link-hover">Deep Checkup</a>
       </div>
       <div>
-        <span class="footer-title">Oral Health</span>
-        <a class="link link-hover">Flouride Treatment</a>
-        <a class="link link-hover">Cavity Filling</a>
-        <a class="link link-hover">Teeth Whitening</a>
+        <span className="footer-title">Oral Health</span>
+        <a className="link link-hover">Flouride Treatment</a>
+        <a className="link link-hover">Cavity Filling</a>
+        <a className="link link-hover">Teeth Whitening</a>
       </div>
       <div>
-        <span class="footer-title">Our Address</span>
-        <a class="link link-hover">Washington - 98121 Seattle</a>
+        <span className="footer-title">Our Address</span>
+        <a className="link link-hover">Washington - 98121 Seattle</a>
       </div>
     </footer>
 	<div className="text-center mb-6">

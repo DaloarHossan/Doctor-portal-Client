@@ -16,22 +16,22 @@ const ContactUs = () => {
           type="text"
           placeholder="Email Address"
 		  name="email"
-          class="input input-bordered input-md w-full max-w-xs mb-4"
+          className="input input-bordered input-md w-full max-w-xs mb-4"
         />
         <input
           type="text"
 		  name="subject"
           placeholder="Subject"
-          class="input input-bordered input-md w-full max-w-xs mb-4"
+          className="input input-bordered input-md w-full max-w-xs mb-4"
         />
 
-        <textarea class="textarea w-80 h-24 mb-2" placeholder="Your message"
+        <textarea className="textarea w-80 h-24 mb-2" placeholder="Your message"
 		name="message"></textarea>
         <input
           type="submit"
           value="Submit"
           placeholder="Type here"
-          class="px-8 my-6 py-2  rounded-lg bg-gradient-to-r from-secondary to-primary border-0 text-white  max-w-xs"
+          className="px-8 my-6 py-2  rounded-lg bg-gradient-to-r from-secondary to-primary border-0 text-white  max-w-xs"
         />
       </form>
     </div>
