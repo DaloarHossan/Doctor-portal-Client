@@ -3,7 +3,7 @@ import React from 'react';
 const InfoCard = ({img,className,title,description}) => {
 	return (
 		<div className={`${className} rounded-md px-4`}>
-			<div class="card card-side">
+			<div class="card lg:max-w-lg card-side">
   <figure><img src={img} alt=""/></figure>
   <div class="card-body">
     <h2 class="card-title">{title}</h2>
