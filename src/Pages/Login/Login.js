@@ -80,7 +80,7 @@ const Login = () => {
             <p><small className="label-text text-red-500">{setError}</small></p>
 			<input type="submit" className="btn w-full max-w-xs text-white" value="Login"/>
           </form>
-		  <p><small>New to Doctors Portal? <Link className="text-primary" to="/singup">Create New Account</Link></small></p>
+		  <p><small>New to Doctors Portal? <Link className="text-primary" to="/signup">Create New Account</Link></small></p>
 		  <div className="divider">OR</div>
 		  <button onClick={handelGoogle} className="btn btn-outline">Continue With Google</button>
 
