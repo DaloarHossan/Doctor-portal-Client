@@ -1,12 +1,13 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from "../../firebase.config";
 import Loading from "../Sheared/Loading";
 
 const Signup = () => {
 	const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+	const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 	const [
 		createUserWithEmailAndPassword,
 		user,
@@ -17,17 +18,18 @@ const Signup = () => {
 	const navigate=useNavigate(auth);
 	let setError;
 	  const { register, handleSubmit, formState: { errors } } = useForm();
-	if(loading || gLoading){
+	if(loading || gLoading || updating){
 	  return <Loading></Loading>
 	}
-	if(error || gError){
+	if(error || gError || updateError){
 	   setError =gError.message;
 	}
 	if(user || gUser){
 	  navigate('/')
 	}
-	  const onSubmit = data => {
-	  createUserWithEmailAndPassword(data.email, data.password)
+	  const onSubmit =async (data) => {
+	  await createUserWithEmailAndPassword(data.email, data.password);
+	  await updateProfile({displayName: data.name})
 	};
 	const handelGoogle=()=>{
 	  signInWithGoogle()

@@ -1,7 +1,10 @@
 import { format } from "date-fns";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.config";
 
 const Booking = ({ booking, date,setBooking }) => {
+  const [user] = useAuthState(auth);
   const { name,slot } = booking;
   const handelBook = (e)=>{
     e.preventDefault();
@@ -43,10 +46,14 @@ const Booking = ({ booking, date,setBooking }) => {
                 type="text"
                 placeholder="Full Name"
                 name="name"
-                className="input input-bordered input-md w-full max-w-xs mb-4"
+                value={user.displayName}
+                disabled
+                className="input capitalize input-bordered input-md w-full max-w-xs mb-4"
               />
               <input
                 type="text"
+                disabled
+                value={user.email}
                 placeholder="Email Address"
                 name="email"
                 className="input input-bordered input-md w-full max-w-xs mb-4"
